@@ -1,0 +1,209 @@
+.header-section{
+    width: 100%;
+    padding: 16px;
+    box-shadow: 2px 2px 12px gray;
+}
+.header-div{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    align-content: end;
+
+}
+.Notelogo{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #111827;
+    font-size: 1.3rem;
+}
+.garuationCap{
+    height: 32px;
+    width: 32px;
+    color: rgba(0, 0, 255, 0.808);
+}
+.header-nav ul{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+.header-nav ul li .link{
+    color: rgb(38, 36, 36);
+    text-decoration: none;
+}
+.header-nav ul li .link:hover{
+        color: blue;
+}
+.activelink{
+    color: blue;
+    text-decoration: underline;
+}
+.hamburgur-div{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-div{
+        width: 95%;
+    }
+    .header-nav ul li .link{
+        color: rgb(38, 36, 36);
+    }
+   
+}
+@media screen and (max-width: 998px) {
+    .hamburgur-div{
+        display: inline-block;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+       
+    }
+    .hamburgur{
+        height: 32px;
+        width: 32px;
+    }
+    .header-nav{
+        display: none;
+    }
+    .ham-active{
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+    }
+    .ham-active ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.1rem;
+       
+    }
+    .ham-active ul li{
+        width: 60%;
+        text-align: center;
+        border-bottom: 2px solid rgba(38, 36, 36, 0.379);
+    }
+    .ham-active ul li .link{
+        color: rgb(38, 36, 36);
+    }
+}
+
+
+/* Footer Styling */
+.footer-section{
+    width: 100%;
+    background-color: #111827;
+    color: white;
+    padding: 16px;
+}
+.footer-div{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.contact-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+    /* margin-left: 1rem; */
+}
+.contact-flex p{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.Quick-Link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.quick-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+    /* margin-left: 1rem; */
+}
+.quick-flex .link{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+}
+.quick-flex .link:hover{
+    color: blue;
+}
+
+.Newletter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.newsletter-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+    /* margin-left: 1rem; */
+}
+
+.input-form{
+    width: 100%;
+}
+.input-form input{
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 6px 16px;
+}
+.input-form button{
+    width: 30%;
+    border: none;
+    padding: 6px 16px;
+    background-color: #2563EB;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.input-form button:hover{
+    background-color: blue;
+}
+.copyright-footer{
+    border-top: 1px solid rgb(96, 95, 93);
+    padding-top: 6px;
+    text-align: center;
+    font-size: 10px;
+}
+@media screen and (max-width:930px) {
+    .contact-footer{
+       flex-direction: column;
+       gap: 16px;
+    }
+    .contact-footer h1{
+        border-bottom: 2px solid white;
+    } 
+
+}
