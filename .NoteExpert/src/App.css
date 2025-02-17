@@ -24,6 +24,16 @@
     margin: 2.2rem auto;
     column-width: 150px;
 }
+@media (max-width:995px) {
+    .lg-react-element{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:570px) {
+    .lg-react-element{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 .m-b-4{
     margin-bottom: 4rem;
 }
