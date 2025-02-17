@@ -41,7 +41,7 @@ export const CourseCard=({currEle})=>{
                                 <span>{iconObj[curr.icon]}</span>
                                 {curr.h1}
                             </h1>
-                            <p>{curr.p}</p>
+                            <p className="text-[#494646]">{curr.p}</p>
                         </div>
                     )
                 })

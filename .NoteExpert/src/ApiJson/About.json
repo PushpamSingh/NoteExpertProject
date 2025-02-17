@@ -16,7 +16,8 @@
     {
         "id":"ac3",
         "icon":"FiCheckCircle",
-        "h1":"2000",
+        "h1":"95",
+        "per":"%",
         "p":"Success Rate"
 
     },

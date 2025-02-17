@@ -3,7 +3,65 @@ import { LuUsers } from "react-icons/lu";
 import { FiCheckCircle } from "react-icons/fi";
 import { FiAward } from "react-icons/fi";
 import about from "../ApiJson/About.json"
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import gsap from "gsap";
 export const About=()=>{
+    const {ref, inView} = useInView({
+        threshold:0.4
+    })
+    useEffect(() => {
+        const cards = gsap.utils.toArray(".about-mid1-section-div-card");
+    
+        if (inView) {
+            // First Card Animation
+            gsap.fromTo(
+                cards[0],
+                {
+                   opacity:0.2,
+                   y:400,
+                   scale:0.95
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale:1,
+                    duration: 0.6, // Longer duration for smoother motion
+                stagger: 0.3, // Slightly faster stagger for better flow
+                ease: "power4.out", // Smoother easing curve
+                // clearProps: "all"
+                }
+            );
+    
+            // Second Card Animation
+            gsap.fromTo(
+                cards[1],
+                 {
+                   opacity:0.5,
+                   y:400,
+                   scale:0.95
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale:1,
+                    duration: 0.6, // Longer duration for smoother motion
+                    stagger: 0.3, // Slightly faster stagger for better flow
+                    ease: "power4.out", // Smoother easing curve
+                    // clearProps: "all" // Smoother easing
+                }
+            );
+        } else {
+            // Instantly set opacity to 0 when not in view
+            cards.forEach((card) => {
+                gsap.set(card, {
+                    opacity: 0,
+                    y: 200, // Reset position if needed
+                    scale:0.95
+                });
+            });
+        }
+    }, [inView]);
     const iconObj={
         FiBookOpen:<FiBookOpen className="about-icon-mid2"/>,
         LuUsers:<LuUsers className="about-icon-mid2"/>,
@@ -20,7 +78,7 @@ export const About=()=>{
                 </div>
             </section>
 
-            <section className="about-mid1-section">
+            <section ref={ref} className="about-mid1-section">
                 <div className="about-mid1-section-div home-mid-section-div">
                         {[
                             {
@@ -53,7 +111,7 @@ export const About=()=>{
                         about.map((curr)=>{
                             return (<div className="about-mid2-section-div-card">
                                     {iconObj[curr.icon]}
-                                    <h1>{curr.h1} <span>+</span> </h1>
+                                    <h1>{curr.h1} <span>{curr.per? "%": "+"}</span> </h1>
                                     <p>{curr.p}</p>
                             </div>)
                         })

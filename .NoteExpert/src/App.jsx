@@ -10,7 +10,8 @@ import { Placements } from './Pages/Placements'
 import { Developers } from './Pages/Developers'
 
 function App() {
-  const router=createBrowserRouter([
+  const router=createBrowserRouter(
+    [
     {
       path:'/',
       element:<PageLayout/>,

@@ -1,10 +1,20 @@
 import { LuGraduationCap } from "react-icons/lu";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FiBookOpen } from "react-icons/fi";
+import { LuUsers } from "react-icons/lu";
+// import { FiCheckCircle } from "react-icons/fi";
+import { RiShieldUserLine } from "react-icons/ri";
+import { FiAward } from "react-icons/fi";
+import { GoImage } from "react-icons/go";
+import { IoCodeSharp } from "react-icons/io5";
 import { NavLink } from "react-router";
 import "./header.css";
 import { useState } from "react";
 export const Header = () => {
   const [active, setActive] = useState(false);
+  const handeltogglemenu=()=>{
+    setActive(false)
+  }
   return (
     <>
       <section className="header-section">
@@ -20,60 +30,72 @@ export const Header = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  Home
+                  <LuGraduationCap className="Icon"/>
+                  <span>Home</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/about"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  About
+                  <LuUsers className="Icon"/>
+                  <span>About</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/courses"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  Courses
+                  <FiBookOpen className="Icon"/>
+                  <span>Courses</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/placements"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  Placements
+                  <FiAward className="Icon"/>
+                  <span>Placements</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/testimonials"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  Testimonials
+                  <RiShieldUserLine className="Icon"/>
+                  <span>Testimonials</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/gallery"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  Gallery
+                  <GoImage className="Icon"/>
+                  <span>Gallery</span>
                 </NavLink>
               </li>
              
@@ -81,10 +103,12 @@ export const Header = () => {
                 <NavLink
                   to="/developers"
                   className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
+                    return isActive ? "activelink nav-flex" : "link nav-flex";
                   }}
+                  onClick={handeltogglemenu}
                 >
-                  Developers
+                  <IoCodeSharp className="Icon"/>
+                  <span>Developers</span>
                 </NavLink>
               </li>
             </ul>

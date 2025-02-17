@@ -36,36 +36,28 @@ export const Footer = () => {
               <div className="quick-flex">
                 <NavLink
                   to="/about"
-                  className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
-                  }}
+                  className="link"
                 >
                   About
                 </NavLink>
 
                 <NavLink
                   to="/courses"
-                  className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
-                  }}
+                  className="link"
                 >
                   Courses
                 </NavLink>
 
                 <NavLink
                   to="/placements"
-                  className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
-                  }}
+                  className="link"
                 >
                   Placements
                 </NavLink>
 
                 <NavLink
                   to="/gallery"
-                  className={({ isActive }) => {
-                    return isActive ? "activelink" : "link";
-                  }}
+                  className="link"
                 >
                   Gallery
                 </NavLink>

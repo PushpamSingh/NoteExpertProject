@@ -1,6 +1,7 @@
 import './PagesCss/CoursesPlace.css';
 import course from '../ApiJson/Courses.json';
 import { CourseCard } from './UI/CourseCard';
+import { ImportantLink } from './UI/ImportantLink';
 
 export const Courses=()=>{
     return (<>
@@ -23,6 +24,8 @@ export const Courses=()=>{
             </div>
 
         </section>
+
+            <ImportantLink/>
 
     </section>
     </>)
