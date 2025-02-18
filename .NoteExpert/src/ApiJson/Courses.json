@@ -12,7 +12,7 @@
         "li4link":"#",
         "li5":"Computer Networks",
         "li5link":"#",
-        "access":"#"
+        "access":"BCA"
     },
     {
         "h1":"BSC IT",
@@ -27,7 +27,7 @@
         "li4link":"#",
         "li5":"Mobile Development",
         "li5link":"#",
-        "access":"#"
+        "access":"BSCIT"
     },
     {
         "h1":"BCS",
@@ -42,6 +42,6 @@
         "li4link":"#",
         "li5":"Theory of Computation",
         "li5link":"#",
-        "access":"#"
+        "access":"BCS"
     }
 ]

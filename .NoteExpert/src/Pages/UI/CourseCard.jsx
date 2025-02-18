@@ -64,7 +64,7 @@ export const CourseCard=({currEle})=>{
                 </ul>
         </div>
         <div className='course-card-btn'>
-            <NavLink to={currEle.access} className='course-card-nav'>Access Materials</NavLink>
+            <NavLink to={`${currEle.access}`} className='course-card-nav'>Access Materials</NavLink>
         </div>
     </div> 
 

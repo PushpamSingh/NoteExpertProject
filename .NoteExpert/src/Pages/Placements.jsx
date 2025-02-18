@@ -30,8 +30,8 @@ export const Placements=()=>{
                     <div className="placement-mid1-section-div">
                         
                             {
-                               placementCourse.map((curr)=>{
-                                return <PlacementCourseCard currEle={curr}/>
+                               placementCourse.map((curr,index)=>{
+                                return <PlacementCourseCard currEle={curr} key={index}/>
                                })
                             }
                     </div>
@@ -41,8 +41,8 @@ export const Placements=()=>{
                     <h1 className='aptitudeh1'>APTITUDE ROUND</h1>
                         <div className='placement-mid2-section-div placement-mid1-section-div'>
                             {
-                             Aptitude.map((curr)=>{
-                                    return <AptitudePlacement curr={curr}/>
+                             Aptitude.map((curr,index)=>{
+                                    return <AptitudePlacement curr={curr} key={`Apti${index}`}/>
                                 })
                             }
                         </div>
@@ -54,8 +54,8 @@ export const Placements=()=>{
                         <h1 className='companyh1 Coursesh1'>COMPANIES</h1>
                             <div className='mid3-card'>
                             {
-                                company.map((curr)=>{
-                                    return <NavLink to={curr.link} className="companyLink">{curr.name}</NavLink>
+                                company.map((curr,index)=>{
+                                    return <NavLink to={curr.link} key={`company${index}`} className="companyLink">{curr.name}</NavLink>
                                 })
                             }
                             </div>

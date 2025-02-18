@@ -8,8 +8,12 @@ import { Testimonials } from './Pages/Testimonials'
 import { Gallery } from './Pages/Gallery'
 import { Placements } from './Pages/Placements'
 import { Developers } from './Pages/Developers'
+import { BCA } from './Pages/UI/BCA'
+import { BSCIT } from './Pages/UI/BSCIT'
+import { BCS } from './Pages/UI/BCS'
 
 function App() {
+  
   const router=createBrowserRouter(
     [
     {
@@ -44,6 +48,18 @@ function App() {
           path:'/developers',
           element:<Developers/>
         },
+        {
+          path:'/courses/BCA',
+          element:<BCA/>
+        },
+        {
+          path:'/courses/BSCIT',
+          element:<BSCIT/>
+        },
+        {
+          path:'/courses/BCS',
+          element:<BCS/>
+        }
       ]
     }
   ])

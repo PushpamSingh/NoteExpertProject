@@ -244,7 +244,7 @@ export const Home = () => {
                                         <GrLinkNext className="bott-icon" />
                                         <span>{curr.p3}</span>
                                     </p>
-                                    <NavLink to="/courses" className="explorebtn-bott">
+                                    <NavLink to={`/courses/${curr.id===1?'BCA':curr.id===2?'BSCIT':'BCS'}`} className="explorebtn-bott">
                                         Explore
                                     </NavLink>
                                 </div>
